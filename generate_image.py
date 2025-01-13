@@ -14,7 +14,7 @@ def generate_random_filename():
 def generate_image():
     color = generate_random_color()
     filename = generate_random_filename()
-    image = Image.new("RGB", (1920, 1080), color)
+    image = Image.new("RGB", (random.randint(800, 1920), random.randint(600, 1080)), color)
     image.save(filename)
     print(f"Image saved as {filename}")
 
